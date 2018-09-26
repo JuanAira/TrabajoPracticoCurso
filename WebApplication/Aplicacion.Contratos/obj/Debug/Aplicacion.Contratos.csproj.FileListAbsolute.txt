@@ -1,0 +1,6 @@
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\bin\Debug\Aplicacion.Contratos.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\bin\Debug\Aplicacion.Contratos.pdb
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\obj\Debug\Aplicacion.Contratos.csprojResolveAssemblyReference.cache
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\obj\Debug\Aplicacion.Contratos.csproj.CoreCompileInputs.cache
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\obj\Debug\Aplicacion.Contratos.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Contratos\obj\Debug\Aplicacion.Contratos.pdb

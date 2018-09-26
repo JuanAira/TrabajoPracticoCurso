@@ -1,0 +1,24 @@
+﻿@using WebApplication.Models
+@model CategoriasModel
+@{
+    ViewBag.Title = "Crear categorias";
+}
+<h2>Crear categorias</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    @Html.LabelFor(x => x.Nombre)
+    @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Nombre)
+
+    <br>
+
+    @Html.LabelFor(x => x.Descripcion)
+    @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Descripcion)
+
+    <br>
+    <button type="submit">  Guardar </button>
+}
