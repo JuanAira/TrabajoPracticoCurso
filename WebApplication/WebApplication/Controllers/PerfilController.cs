@@ -8,10 +8,8 @@ namespace WebApplication.Controllers
 {
     public class PerfilController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Crear()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
     }

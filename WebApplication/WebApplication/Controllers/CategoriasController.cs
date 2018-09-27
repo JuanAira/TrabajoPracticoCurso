@@ -17,14 +17,33 @@ namespace WebApplication.Controllers
             this.categorias = categori;
         }
 
-        public ActionResult Index()
+
+        //Grilla
+        public ActionResult Grilla()
         {
-            ViewBag.Message = "Your application description page.";
-            return View();
+            IList<CategoriasModel> listaCategoriasModelos = new List<CategoriasModel>();
+
+            var lista = categorias.ListarCategorias();
+
+            foreach (var item in lista)
+            {
+                listaCategoriasModelos.Add(new CategoriasModel { Descripcion = item.Descripcion, Id = item.Id, Nombre = item.Nombre });
+            }
+
+            if (listaCategoriasModelos.Count == 0)
+            {
+                return View();
+            }
+            else
+            {
+                return View(listaCategoriasModelos);
+            }
         }
 
+
+        //Crear
         public ActionResult Crear()
-        {    
+        {
             return View();
         }
 
@@ -38,52 +57,42 @@ namespace WebApplication.Controllers
                 return View(cat);
             }
 
-            categorias.CrearCategoria(categoriaGuardar);       
+            categorias.CrearCategoria(categoriaGuardar);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Grilla");
 
         }
 
-        public ActionResult Actualizar()
+
+        //Editar
+        public ActionResult Editar(int id)
         {
-            return View();
+            var categoria = categorias.ListarCategorias().Where(x => x.Id == id).First();
+
+            return View(new CategoriasModel { Id = categoria.Id, Nombre = categoria.Nombre, Activa = categoria.Activa, Descripcion = categoria.Descripcion });
         }
 
         [HttpPost]
-        public ActionResult Actualizar( CategoriasModel cat)
+        public ActionResult Editar(CategoriasModel cat)
         {
-            return View(cat);
+            if (!ModelState.IsValid)
+            {
+                return View(cat);
+            }
 
+            var categoria = new Categoria { Id = cat.Id, Activa = cat.Activa, Descripcion = cat.Descripcion, Nombre = cat.Nombre };
 
+            categorias.EditarCategorias(categoria);
+
+            return RedirectToAction("Grilla");
         }
 
 
-        public ActionResult EliminarCategorias()
+        //Eliminar
+        public ActionResult Eliminar(int id)
         {
-            return View();
+            categorias.EliminarCategorias(id);
+            return RedirectToAction("Grilla");
         }
-
-        [HttpPost]
-        public ActionResult EliminarCategorias(CategoriasModel cat)
-        {
-            categorias.EliminarCategorias(cat.Id);
-
-            return View();
-        }
-
-        //public ActionResult GrillaCategorias()
-        //{
-        //    var listaCategorias = categorias.ListarCategorias();
-        //    var resultado = (from c in listaCategorias
-        //                     select new GrillaModel
-        //                     {
-        //                         Id = c.Id,
-        //                         Descripcion = c.Descripcion,
-        //                         Nombre = c.Nombre
-        //                     }).ToList();
-
-        //    return View(resultado);
-        //}
-
     }
 }

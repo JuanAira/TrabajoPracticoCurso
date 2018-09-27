@@ -9,23 +9,22 @@ namespace Aplicacion.Servicios
 {
     public class Categorias : ICategorias
     {
-        private List<Categoria> ListaCategorias { get; set; }
-
-        public Categorias()
-        {
-            this.ListaCategorias = new List<Categoria>();
-        }
+        public static List<Categoria> ListaCategorias = new List<Categoria>();
 
         public List<Categoria> ListarCategorias()
         {
-            return ListaCategorias.Where(x => x.Activa == true).ToList();
+            //return ListaCategorias.Where(x => x.Activa == true).ToList();
+            ListaCategorias.Add(new Categoria { Nombre = "aaaaaaaaaaaaaa", Activa = true, Descripcion = "1111111111111", Id = 1 });
+            ListaCategorias.Add(new Categoria { Nombre = "bbbbbbbbbbbbbb", Activa = true, Descripcion = "2222222222222", Id = 2 });
+            return ListaCategorias;
         }
 
-        public void ActualizarCategorias(Categoria cat)
+        public void EditarCategorias(Categoria cat)
         {
             var categoriaEncontrada = ListaCategorias.Where(x => x.Id == cat.Id).First();
-
-            categoriaEncontrada = cat;
+            
+            if(categoriaEncontrada!= null)
+                categoriaEncontrada.Activa = cat.Activa; categoriaEncontrada.Descripcion = cat.Descripcion; categoriaEncontrada.Nombre = cat.Nombre;       
         }
 
         public void CrearCategoria(Categoria cat)

@@ -1,0 +1,158 @@
+﻿@using WebApplication.Models
+
+
+@{
+    ViewBag.Title = "Grilla";
+}
+
+@model IList<CategoriasModel>
+
+@*<button class="button" href="#" type="submit"> Guardar </button>*@
+<a class="buttonCrearNuevaCategoria" href="http://localhost:62652/Categorias/Crear"> Nueva categoria </a>
+
+<br />
+<br />
+<br />
+
+<table id="myDataTable" class="table table-condensed table-hover table-striped">
+    <thead>
+        <tr>
+            <th data-column-id="id" data-type="numeric">ID</th>
+            <th data-column-id="sender">Nombre</th>
+            <th data-column-id="received" data-order="desc">Descripción</th>
+
+
+            <th data-column-id="link" data-formatter="link" data-sortable="">Activa</th>
+            
+    
+
+            <th data-column-id="link" data-formatter="link"> Editar </th>
+            <th data-column-id="link" data-formatter="link"> Eliminar </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre</td>
+            <td>@item.Descripcion</td>
+            <td>@item.Activa</td>
+
+            <td><a class="buttonEditar" href=""> Editar </a></td>
+            <td><a class="buttonEliminar" href=""> Eliminar </a></td>
+
+            @*<td>@Html.ActionLink("Editar", "Editar", new { id = item.Id })</td>*@
+            @*<td>@Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { onclick = "return confirm('Está seguro de eliminar la categoría?');" })</td>*@
+        </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .buttonCrearNuevaCategoria {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 29px;
+        border: 1px solid #2e1c95;
+        border-radius: 18px;
+        background: #5635ff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#5635ff), to(#2e1c95));
+        background: -moz-linear-gradient(top, #5635ff, #2e1c95);
+        background: linear-gradient(to bottom, #5635ff, #2e1c95);
+        text-shadow: #1b1158 5px -4px 3px;
+        font: normal normal bold 20px arial;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .buttonCrearNuevaCategoria:hover,
+        .buttonCrearNuevaCategoria:focus {
+            border: 1px solid ##3621af;
+            background: #6740ff;
+            background: -webkit-gradient(linear, left top, left bottom, from(#6740ff), to(#3722b3));
+            background: -moz-linear-gradient(top, #6740ff, #3722b3);
+            background: linear-gradient(to bottom, #6740ff, #3722b3);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .buttonCrearNuevaCategoria:active {
+            background: #2e1c95;
+            background: -webkit-gradient(linear, left top, left bottom, from(#2e1c95), to(#2e1c95));
+            background: -moz-linear-gradient(top, #2e1c95, #2e1c95);
+            background: linear-gradient(to bottom, #2e1c95, #2e1c95);
+        }
+
+    .buttonEditar {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 29px;
+        border: 1px solid #a99204;
+        border-radius: 18px;
+        background: #ffef06;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffef06), to(#a99204));
+        background: -moz-linear-gradient(top, #ffef06, #a99204);
+        background: linear-gradient(to bottom, #ffef06, #a99204);
+        text-shadow: #796803 5px -4px 3px;
+        font: normal normal bold 20px arial;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .buttonEditar:hover,
+        .buttonEditar:focus {
+            border: 1px solid ##f1d005;
+            background: #ffff07;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ffff07), to(#cbaf05));
+            background: -moz-linear-gradient(top, #ffff07, #cbaf05);
+            background: linear-gradient(to bottom, #ffff07, #cbaf05);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .buttonEditar:active {
+            background: #a99204;
+            background: -webkit-gradient(linear, left top, left bottom, from(#a99204), to(#a99204));
+            background: -moz-linear-gradient(top, #a99204, #a99204);
+            background: linear-gradient(to bottom, #a99204, #a99204);
+        }
+
+    .buttonEliminar {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 29px;
+        border: 1px solid #be120a;
+        border-radius: 18px;
+        background: #ff2213;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ff2213), to(#be120a));
+        background: -moz-linear-gradient(top, #ff2213, #be120a);
+        background: linear-gradient(to bottom, #ff2213, #be120a);
+        text-shadow: #700b06 5px -4px 3px;
+        font: normal normal bold 20px arial;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .buttonEliminar:hover,
+        .buttonEliminar:focus {
+            border: 1px solid ##e0150c;
+            background: #ff2917;
+            background: -webkit-gradient(linear, left top, left bottom, from(#ff2917), to(#e4160c));
+            background: -moz-linear-gradient(top, #ff2917, #e4160c);
+            background: linear-gradient(to bottom, #ff2917, #e4160c);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .buttonEliminar:active {
+            background: #be120a;
+            background: -webkit-gradient(linear, left top, left bottom, from(#be120a), to(#be120a));
+            background: -moz-linear-gradient(top, #be120a, #be120a);
+            background: linear-gradient(to bottom, #be120a, #be120a);
+        }
+
+</style>

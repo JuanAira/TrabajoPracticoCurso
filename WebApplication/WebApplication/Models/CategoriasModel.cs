@@ -20,5 +20,7 @@ namespace WebApplication.Models
         [MinLength(10)]
         [MaxLength(450)]
         public string Descripcion { get; set; }
+
+        public bool Activa { get; set; }
     }
 }

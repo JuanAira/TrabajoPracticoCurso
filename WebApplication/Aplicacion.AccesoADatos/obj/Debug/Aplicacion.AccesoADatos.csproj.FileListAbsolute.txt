@@ -1,0 +1,11 @@
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.AccesoADatos.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.AccesoADatos.pdb
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.Servicios.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.Contratos.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.Servicios.pdb
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\bin\Debug\Aplicacion.Contratos.pdb
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\obj\Debug\Aplicacion.AccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\obj\Debug\Aplicacion.AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\obj\Debug\Aplicacion.AccesoADatos.csproj.CopyComplete
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\obj\Debug\Aplicacion.AccesoADatos.dll
+C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.AccesoADatos\obj\Debug\Aplicacion.AccesoADatos.pdb

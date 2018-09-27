@@ -11,6 +11,6 @@ namespace WebApplication.Controllers
         public ActionResult Index()
         {
             return View();
-        }
+        }     
     }
 }

@@ -12,7 +12,7 @@ namespace Aplicacion.Contratos
 
         List<Categoria> ListarCategorias();
         void CrearCategoria(Categoria cat);
-        void ActualizarCategorias(Categoria cat);
+        void EditarCategorias(Categoria cat);
         void EliminarCategorias(int id);
 
     }

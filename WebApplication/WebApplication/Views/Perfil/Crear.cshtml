@@ -16,19 +16,56 @@
 
     @Html.LabelFor(x => x.Nombre)
     @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Nombre)
+    @*@Html.ValidationMessageFor(x => x.Nombre)*@
 
     <br>
 
     @Html.LabelFor(x => x.Apellido)
     @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Apellido)
+    @*@Html.ValidationMessageFor(x => x.Apellido)*@
 
     <br>
-    @Html.LabelFor(x => x.NombreUsuario)
+    @Html.LabelFor(x => x.NombreUsuario) //Ver como hacer que se lea bien
     @Html.TextBoxFor(x => x.NombreUsuario, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.NombreUsuario)
+    @*@Html.ValidationMessageFor(x => x.NombreUsuario)*@
 
     <br>
-    <button type="submit">  Enviar </button>
+    <button class="button" href="#" type="submit"> Guardar </button>
 }
+
+    <style>
+        .button {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px 29px;
+            border: 1px solid #08b20d;
+            border-radius: 18px;
+            background: #0dff16;
+            background: -webkit-gradient(linear, left top, left bottom, from(#0dff16), to(#08b20d));
+            background: -moz-linear-gradient(top, #0dff16, #08b20d);
+            background: linear-gradient(to bottom, #0dff16, #08b20d);
+            text-shadow: #067f0a 5px -4px 3px;
+            font: normal normal bold 20px arial;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+            .button:hover,
+            .button:focus {
+                border: 1px solid ##0bfe13;
+                background: #10ff1a;
+                background: -webkit-gradient(linear, left top, left bottom, from(#10ff1a), to(#0ad610));
+                background: -moz-linear-gradient(top, #10ff1a, #0ad610);
+                background: linear-gradient(to bottom, #10ff1a, #0ad610);
+                color: #ffffff;
+                text-decoration: none;
+            }
+
+            .button:active {
+                background: #08b20d;
+                background: -webkit-gradient(linear, left top, left bottom, from(#08b20d), to(#08b20d));
+                background: -moz-linear-gradient(top, #08b20d, #08b20d);
+                background: linear-gradient(to bottom, #08b20d, #08b20d);
+            }
+    </style>
