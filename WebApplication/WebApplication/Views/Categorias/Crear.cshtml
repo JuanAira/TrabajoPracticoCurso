@@ -5,6 +5,9 @@
 }
 <h2>Crear categorias</h2>
 
+<img src="~/Fotos/Babosa-Electroshock-Tazerling-Slug.png" id="Imagen1" />
+
+<br />
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary()
@@ -17,16 +20,34 @@
 
     @Html.LabelFor(x => x.Descripcion)
     @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control" })
-  //  @Html.ValidationMessageFor(x => x.Descripcion)
+    //  @Html.ValidationMessageFor(x => x.Descripcion)
 
     <br>
-
+    <br>
+    <br>
     //<a class="button" href="#"> Guardar </a>
-    <button class="button" href="#" type="submit"> Guardar </button>
+    <button class="buttonGuardar" href="#" type="submit"> Guardar </button>
 }
 
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
 <style>
-    .button {
+    .buttonGuardar {
         display: inline-block;
         text-align: center;
         vertical-align: middle;
@@ -43,8 +64,8 @@
         text-decoration: none;
     }
 
-        .button:hover,
-        .button:focus {
+        .buttonGuardar:hover,
+        .buttonGuardar:focus {
             border: 1px solid ##0bfe13;
             background: #10ff1a;
             background: -webkit-gradient(linear, left top, left bottom, from(#10ff1a), to(#0ad610));
@@ -54,12 +75,15 @@
             text-decoration: none;
         }
 
-        .button:active {
+        .buttonGuardar:active {
             background: #08b20d;
             background: -webkit-gradient(linear, left top, left bottom, from(#08b20d), to(#08b20d));
             background: -moz-linear-gradient(top, #08b20d, #08b20d);
             background: linear-gradient(to bottom, #08b20d, #08b20d);
         }
 
-        
+    #Imagen1 {
+        float: right;
+        margin: 0px 190px;
+    }
 </style>

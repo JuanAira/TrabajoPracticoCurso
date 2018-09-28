@@ -1,14 +1,14 @@
 ﻿@using WebApplication.Models
 
-
 @{
     ViewBag.Title = "Grilla";
 }
 
 @model IList<CategoriasModel>
 
-@*<button class="button" href="#" type="submit"> Guardar </button>*@
 <a class="buttonCrearNuevaCategoria" href="http://localhost:62652/Categorias/Crear"> Nueva categoria </a>
+
+<img src="~/Fotos/Berpi-Infierno_Megamoph(Protoforma).png" id="Imagen2" />
 
 <br />
 <br />
@@ -30,6 +30,7 @@
             <th data-column-id="link" data-formatter="link"> Eliminar </th>
         </tr>
     </thead>
+
     <tbody>
         @foreach (var item in Model)
         {
@@ -40,9 +41,9 @@
             <td>@item.Activa</td>
 
 
-            <td><a class="buttonEditar"  href=""> Editar </a></td>
+            <td><a class="buttonEditar" id= @item.Id data-formatter="" href=""> Editar </a></td>
 
-            <td><a class="buttonEliminar" href=""> Eliminar </a></td>
+            <td><a class="buttonEliminar" id= @item.Id href=""> Eliminar </a></td>
             
             
 
@@ -52,6 +53,17 @@
         }
     </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
     .buttonCrearNuevaCategoria {
@@ -159,4 +171,8 @@
             background: linear-gradient(to bottom, #be120a, #be120a);
         }
 
+    #Imagen2 {
+        float: right;
+        margin: 0px -250px;
+    }
 </style>
