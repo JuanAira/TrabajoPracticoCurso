@@ -16,7 +16,7 @@ namespace Aplicacion.Servicios
             //return ListaCategorias.Where(x => x.Activa == true).ToList();
             ListaCategorias.Add(new Categoria { Nombre = "aaaaaaaaaaaaaa", Activa = true, Descripcion = "1111111111111", Id = 1 });
             ListaCategorias.Add(new Categoria { Nombre = "bbbbbbbbbbbbbb", Activa = true, Descripcion = "2222222222222", Id = 2 });
-            return ListaCategorias;
+            return ListaCategorias.Where(x=> x.Activa==true).ToList();
         }
 
         public void EditarCategorias(Categoria cat)

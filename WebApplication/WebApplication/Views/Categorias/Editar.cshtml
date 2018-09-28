@@ -1,0 +1,89 @@
+﻿@using WebApplication.Models
+@model CategoriasModel
+
+@{
+    /**/
+
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+
+<img src="~/Fotos/Berpi-Infierno_Megamoph(Protoforma).png" id="Imagen2" />
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    @Html.HiddenFor(x => x.Id);
+
+    <br />
+
+    @Html.LabelFor(x => x.Nombre)
+    @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Descripcion)
+    @Html.TextBoxFor(x => x.Descripcion, new { @class = "form-control" })
+
+    <br>
+    <br>
+    <br>
+    <button class="buttonGuardar" href="#" type="submit"> Guardar </button>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .buttonGuardar {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        padding: 12px 29px;
+        border: 1px solid #08b20d;
+        border-radius: 18px;
+        background: #0dff16;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0dff16), to(#08b20d));
+        background: -moz-linear-gradient(top, #0dff16, #08b20d);
+        background: linear-gradient(to bottom, #0dff16, #08b20d);
+        text-shadow: #067f0a 5px -4px 3px;
+        font: normal normal bold 20px arial;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .buttonGuardar:hover,
+        .buttonGuardar:focus {
+            border: 1px solid ##0bfe13;
+            background: #10ff1a;
+            background: -webkit-gradient(linear, left top, left bottom, from(#10ff1a), to(#0ad610));
+            background: -moz-linear-gradient(top, #10ff1a, #0ad610);
+            background: linear-gradient(to bottom, #10ff1a, #0ad610);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .buttonGuardar:active {
+            background: #08b20d;
+            background: -webkit-gradient(linear, left top, left bottom, from(#08b20d), to(#08b20d));
+            background: -moz-linear-gradient(top, #08b20d, #08b20d);
+            background: linear-gradient(to bottom, #08b20d, #08b20d);
+        }
+
+    #Imagen2 {
+        float: right;
+        margin: 0px 190px;
+    }
+
+</style>

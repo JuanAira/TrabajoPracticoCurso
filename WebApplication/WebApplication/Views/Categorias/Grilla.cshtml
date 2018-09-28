@@ -6,13 +6,16 @@
 
 @model IList<CategoriasModel>
 
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+</head>
+
 <a class="buttonCrearNuevaCategoria" href="http://localhost:62652/Categorias/Crear"> Nueva categoria </a>
 
-<img src="~/Fotos/Berpi-Infierno_Megamoph(Protoforma).png" id="Imagen2" />
+<br />
+<br />
+<br />
 
-<br />
-<br />
-<br />
 
 <table id="myDataTable" class="table table-condensed table-hover table-striped">
     <thead>
@@ -23,8 +26,8 @@
 
 
             <th data-column-id="link" data-formatter="link" data-sortable="">Activa</th>
-            
-    
+
+
 
             <th data-column-id="link" data-formatter="link"> Editar </th>
             <th data-column-id="link" data-formatter="link"> Eliminar </th>
@@ -41,21 +44,31 @@
             <td>@item.Activa</td>
 
 
-            <td><a class="buttonEditar" id= @item.Id data-formatter="" href=""> Editar </a></td>
+  
 
-            <td><a class="buttonEliminar" id= @item.Id href=""> Eliminar </a></td>
-            
-            
+            @*<td><a class="buttonEditar"  id=@item.Id  > Editar </a></td>
 
-            @*<td>@Html.ActionLink("Editar", "Editar", new { id = item.Id })</td>*@
-            @*<td>@Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { onclick = "return confirm('Está seguro de eliminar la categoría?');" })</td>*@
+            <td><a class="buttonEliminar" id=@item.Id href=""> Eliminar </a></td>**@
+
+           
+
+            <td>@Html.ActionLink("Editar", "Editar", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { onclick = "return confirm('Desea eliminar la categoría?');" })</td>
+
         </tr>
         }
     </tbody>
+
 </table>
 
 
-
+@section scripts {
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myDataTable').DataTable();
+        });</script>
+}
 
 
 
@@ -171,8 +184,11 @@
             background: linear-gradient(to bottom, #be120a, #be120a);
         }
 
-    #Imagen2 {
-        float: right;
-        margin: 0px -250px;
+    .dataTables_wrapper {
+        position: relative;
+        background-color:white;
+        clear: both;
+        *zoom: 1;
+        zoom: 1;
     }
 </style>

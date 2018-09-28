@@ -7,3 +7,12 @@ C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Servicios\obj\Deb
 C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.csproj.CopyComplete
 C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.dll
 C:\Users\Juan Aira\Desktop\Tp_Kinexo\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.pdb
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\bin\Debug\Aplicacion.Servicios.dll
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\bin\Debug\Aplicacion.Servicios.pdb
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\bin\Debug\Aplicacion.Contratos.dll
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\bin\Debug\Aplicacion.Contratos.pdb
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.csprojResolveAssemblyReference.cache
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.csproj.CopyComplete
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.dll
+C:\Users\Juan Aira\Desktop\Tp\WebApplication\Aplicacion.Servicios\obj\Debug\Aplicacion.Servicios.pdb
